@@ -6,8 +6,11 @@ const gameBoard = (() => {
     ]
 
     const getBoard = () => board;
+    const setBoard = (row, column, mark) => {
+        board[row][column] = mark;
+    }
 
-    return { getBoard };
+    return { getBoard, setBoard };
 })();
 
 const Player = (name, mark) => {
